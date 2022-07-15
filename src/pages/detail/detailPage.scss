@@ -1,0 +1,111 @@
+@import "../../variables";
+.page_detail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px 0px;
+  position: relative;
+  
+  .movie_detail {
+    width: 100%;
+    height: 390px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: $gen-box-shadow;
+    position: relative;
+    .movie_detail_poster {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .movie_description {
+      width: 100%;
+      height: 70%;
+      position: absolute;
+      bottom: 0;
+      color: $detail-font-color;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 70%
+      );
+      display: flex;
+      align-items: center;
+      padding: 5px 50px;
+      .main_description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .sub_desciption {
+          display: flex;
+          gap: 0px 50px;
+          div {
+            margin: 5px 0px;
+          }
+        }
+        .movie_title {
+          align-self: flex-start;
+          font-weight: 800;
+          font-size: 33px;
+          color: $detail-font-color;
+        }
+        .movie_release_date {
+          align-self: flex-start;
+        }
+        .description_title {
+          font-weight: 600;
+        }
+        .movie_language {
+        }
+        .movie_runtime {
+        }
+        .movie_popularity {
+        }
+        .movie_revenue {
+        }
+        .movie_vote_count {
+        }
+        .movie_overview {
+        }
+      }
+      .movie_rating_form {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .similar_Movies_text {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+  }
+  .similar_movies_main_div {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    gap: 6px;
+    .similar_movies {
+      width: calc(100% / 5);
+      height: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: $gen-box-shadow;
+      .similar_movie_poster {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

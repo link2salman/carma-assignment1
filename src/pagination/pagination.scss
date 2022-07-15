@@ -1,0 +1,39 @@
+@import "../variables";
+.pagination {
+  padding: 10px 20px;
+  display: inline-block;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    padding: 4px 6px;
+    border: none;
+    outline: none;
+    color: $btn-font-color;
+    font-size: 18px;
+    margin: 0px 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 600;
+    background: $btn-bg-color;
+    box-shadow: $gen-box-shadow;
+    align-self: center;
+  }
+  .btn:hover {
+    background: $btn-hvr-bg-color;
+    color: $btn-hvr-font-color;
+  }
+  .active {
+    background: $btn-hvr-bg-color;
+    color: $btn-hvr-font-color;
+  }
+  .disabled {
+    color: lightgray;
+  }
+  .disabled:hover {
+    background: white;
+    color: lightgray;
+  }
+}

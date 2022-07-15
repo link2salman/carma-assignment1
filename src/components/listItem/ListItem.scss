@@ -1,0 +1,9 @@
+@import "../../variables";
+
+.movie_list_item {
+  width:205px;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: $gen-box-shadow;
+}

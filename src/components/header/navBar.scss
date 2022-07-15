@@ -1,0 +1,84 @@
+@import "../../variables";
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .nav_main_links {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+
+    .nav_home_link {
+      text-decoration: none;
+      display: inline-block;
+      font-size: 22px;
+      letter-spacing: 1px;
+      font-weight: 800;
+      color: $main-heading-color;
+    }
+    .sort_movies_types {
+      width: auto;
+      height: 28px;
+      font-size: 18px;
+      font-weight: 400;
+      border-radius: 15px;
+      outline: none;
+      padding: 0px 15px;
+      display: flex;
+      background: transparent;
+      position: relative;
+      gap: 0px 10px;
+
+      .sort_by_popularity {
+        outline: none;
+        border: none;
+        background: $btn-bg-color;
+        color: $btn-font-color;
+        overflow: none;
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 0px 10px;
+      }
+      .sort_by_title {
+        outline: none;
+        border: none;
+        background: $btn-bg-color;
+        color: $btn-font-color;
+        overflow: none;
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 0px 10px;
+      }
+    }
+  }
+  .movie_genre_list {
+    display: flex;
+    padding: 10px 150px;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px 3px;
+    flex-wrap: wrap;
+    .movie_genre_list_button {
+      outline: none;
+      border: none;
+      cursor: pointer;
+      padding: 3px 8px;
+      font-size: 14px;
+      background: $btn-bg-color;
+      color: $btn-font-color;
+      border-radius: 5px;
+      font-weight: 500;
+      &:active,
+      &:hover {
+        background: $btn-hvr-bg-color;
+        color: $btn-hvr-font-color;
+      }
+    }
+  }
+}
