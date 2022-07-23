@@ -4,7 +4,50 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+
+  .sort_movies_types {
+    width: auto;
+    height: 25px;
+    border-radius: 10px;
+    outline: none;
+    display: flex;
+    background: transparent;
+    position: relative;
+    gap: 10px 0px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    .sort_by_popularity {
+      outline: none;
+      border: 1px solid $sorting-brdr-color;
+      background: $sorting-bg-color;
+      color: $sorting-font-color;
+      overflow: none;
+      border-radius: 10px;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      padding: 3px 5px;
+      margin: 0px 20px;
+      cursor: pointer;
+    }
+    .sort_by_title {
+      outline: none;
+      border: 1px solid $sorting-brdr-color;
+      background: $sorting-bg-color;
+      color: $sorting-font-color;
+      overflow: none;
+      border-radius: 10px;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      padding: 3px 5px;
+      cursor: pointer;
+    }
+  }
 
   .pagination {
     display: flex;

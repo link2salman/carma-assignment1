@@ -4,7 +4,6 @@ import {
   getMovies,
   getMoviesbySearch,
   getSortedMovies,
-  getfilteredMovies,
   getMoviesGenre,
   getfilteredMoviesbyGenre,
   getSimilarMovies,
@@ -39,14 +38,6 @@ export const getSortedMoviesThunk = createAsyncThunk(
   "getmovie/sorted",
   async ({ type, page }) => {
     const { data } = await getSortedMovies({ type, page });
-    return data;
-  }
-);
-
-export const getfilteredMoviesThunk = createAsyncThunk(
-  "getmovie/filtered",
-  async ({ type, page }) => {
-    const { data } = await getfilteredMovies({ type, page });
     return data;
   }
 );

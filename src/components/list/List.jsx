@@ -1,21 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ListItem from "../listItem/ListItem";
+import Loader from "../loader/Loader";
 import "./movieList.scss";
 
-const List = ({ movies }) => {
+const List = ({ movies, isLoading }) => {
+
   return (
     <div className="movie_list">
-      {movies &&
-        movies.map((movie) => (
-          <Link
-            to={`/detail/${movie.id}`}
-            key={movie?.id}
-            className="link_detail_list_item"
-          >
-            <ListItem movie={movie} />
-          </Link>
-        ))}
+      {isLoading && <Loader />}
+      {movies && movies.map((movie) => <ListItem movie={movie} key={movie.id}/>)}
     </div>
   );
 };

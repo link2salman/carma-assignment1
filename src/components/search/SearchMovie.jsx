@@ -3,6 +3,7 @@ import { DebounceInput } from "react-debounce-input";
 import "./SearchMovie.scss";
 
 const SearchMovie = ({ setQueryString }) => {
+  
   return (
     <div className="movies_search_box">
       <DebounceInput

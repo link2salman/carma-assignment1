@@ -17,12 +17,14 @@ export const getMoviesbySearch = ({ queryString, page }) => {
   });
   return request;
 };
+
 export const getMovieDetail = ({ id }) => {
   const request = Api.get(`/movie/${id}`, {
     params: { api_key: process.env.REACT_APP_API_KEY },
   });
   return request;
 };
+
 export const getSortedMovies = ({ type, page }) => {
   const request = Api.get(`/discover/movie`, {
     params: {
@@ -33,6 +35,7 @@ export const getSortedMovies = ({ type, page }) => {
   });
   return request;
 };
+
 export const getfilteredMovies = ({ type, page }) => {
   const request = Api.get(`/discover/movie`, {
     params: {
@@ -43,12 +46,14 @@ export const getfilteredMovies = ({ type, page }) => {
   });
   return request;
 };
+
 export const getMoviesGenre = () => {
   const request = Api.get(`/genre/movie/list`, {
     params: { api_key: process.env.REACT_APP_API_KEY },
   });
   return request;
 };
+
 export const getfilteredMoviesbyGenre = ({ id, page }) => {
   const request = Api.get(`/discover/movie`, {
     params: {
@@ -59,12 +64,14 @@ export const getfilteredMoviesbyGenre = ({ id, page }) => {
   });
   return request;
 };
+
 export const getSimilarMovies = ({ id, page }) => {
   const request = Api.get(`/movie/${id}/similar`, {
     params: { api_key: process.env.REACT_APP_API_KEY, page: page },
   });
   return request;
 };
+
 export const rateMovie = ({ id, rating, sessionID }) => {
   if (rating) {
     const request = Api.post(

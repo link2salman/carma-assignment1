@@ -1,0 +1,43 @@
+@import "../../variables";
+.sidebar {
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 45px;
+  padding-right: 30px;
+  .sidebar_filter_head {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    align-self: flex-start;
+    color:$gen_font_color;
+    border-left:2px solid $main_color;
+    padding-left: 0.5rem;
+
+  }
+  .movie_genre_list {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 10px;
+
+    .movie_genre_list_button {
+      padding: 3px 5px;
+      background: $genre-bg-color;
+      outline: none;
+      border: none;
+      color: $genre-font-color;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+    }
+  }
+}

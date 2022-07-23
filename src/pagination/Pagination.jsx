@@ -1,6 +1,8 @@
 import React from "react";
 import { usePagination } from "../utils/usePagination";
 import "./pagination.scss";
+import prev from "../static/prev.png";
+import nxt from "../static/nxt.png";
 
 const Pagination = (props) => {
   const {
@@ -40,13 +42,13 @@ const Pagination = (props) => {
         onClick={onPrevious}
         disabled={isfirst}
       >
-        Previous
+        <img src={prev} alt="" />
       </button>
       {pagesCount &&
-        pagesCount.map((elem) => (
+        pagesCount.map((elem, idx) => (
           <button
             className={`btn btns ${currentPage === elem ? "active" : ""}`}
-            key={elem}
+            key={idx}
             disabled={currentPage === elem || typeof elem !== "number"}
             onClick={() => setCurrentPage(elem)}
           >
@@ -59,7 +61,7 @@ const Pagination = (props) => {
         onClick={onNext}
         disabled={islast}
       >
-        Next
+        <img src={nxt} alt="" />
       </button>
     </div>
   );
